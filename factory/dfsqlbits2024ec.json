@@ -1,0 +1,9 @@
+{
+	"name": "dfsqlbits2024ec",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "63a02792-a755-4d5c-b53d-d9403347e187",
+		"tenantId": "b911a1ce-3d0b-4d4d-be6d-cdc843fd213e"
+	}
+}
