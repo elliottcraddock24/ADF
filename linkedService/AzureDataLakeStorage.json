@@ -1,0 +1,10 @@
+{
+	"name": "AzureDataLakeStorage",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://sqlbits2024saec.dfs.core.windows.net/"
+		}
+	}
+}
