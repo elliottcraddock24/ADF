@@ -1,0 +1,51 @@
+{
+	"name": "CopyAWEntities_TestADF",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@variables('Entities')",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Copy each AW entity",
+							"type": "ExecutePipeline",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"pipeline": {
+									"referenceName": "CopyAWEntity",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true,
+								"parameters": {
+									"Entity": {
+										"value": "@item()",
+										"type": "Expression"
+									}
+								}
+							}
+						}
+					]
+				}
+			}
+		],
+		"variables": {
+			"Entities": {
+				"type": "Array",
+				"defaultValue": [
+					"Product",
+					"ProductSubcategory",
+					"ProductCategory"
+				]
+			}
+		},
+		"annotations": []
+	}
+}
